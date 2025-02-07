@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
 
-
+.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 
 body {
 
