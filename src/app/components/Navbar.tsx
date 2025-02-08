@@ -6,42 +6,47 @@ import Image from "next/image";
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
+    const menuItems = [
+        { name: "Home", path: "/" },
+        { name: "Amenities", path: "/apartment-amenities" },
+        { name: "Floor Plans", path: "/floor-plans" },
+        { name: "Renderings", path: "/renderings" },
+        { name: "Deposit Structure", path: "/deposit-structure" },
+        { name: "Fact Sheet", path: "/fact-sheet" }
+    ];
+
     return (
         <nav className="bg-white shadow-lg lg:py-3 fixed top-0 w-full z-50">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex justify-between items-center h-16">
-                    {/* Logo */}
                     <div className="flex-shrink-0">
-                        <Image
-                            src="/villa-miami-logo-1.svg"
-                            alt="logo"
-                            width={100}
-                            height={100}
-                            className="h-12 w-auto"
-                        />
+                        <Link href="/">
+                            <Image
+                                src="/villa-miami-logo-1.svg"
+                                alt="logo"
+                                width={100}
+                                height={100}
+                                className="h-12 w-auto"
+                            />
+                        </Link>
                     </div>
-
-                    {/* Menú Desktop (hidden en móviles) */}
                     <div className="hidden lg:flex items-center space-x-8">
                         <ul className="flex space-x-8 text-sm">
-                            {["Home", "Amenities", "Floor Plans", "Renderings", "Deposit Structure", "Fact Sheet"].map((item) => (
-                                <li key={item} className="relative group">
-                                    <Link href="/" className="text-gray-700 hover:text-gray-900 font-medium">
-                                        {item.toUpperCase()}
-                                    </Link>
-                                    <span className="absolute bottom-0 left-0 transform  w-0 group-hover:w-2/5 h-0.5 bg-[#ff7400] transition-all duration-300"></span>
+                            {menuItems.map(({ name, path }) => (
+                                <li key={name} className="relative group">
+                                    <a href={path} className="text-gray-700 hover:text-gray-900 font-medium">
+                                        {name.toUpperCase()}
+                                    </a>
+                                    <span className="absolute bottom-0 left-0 transform w-0 group-hover:w-2/5 h-0.5 bg-[#ff7400] transition-all duration-300"></span>
                                 </li>
                             ))}
                         </ul>
-
                     </div>
                     <div className="hidden lg:flex items-center space-x-4">
                         <button className="bg-[#ff7400] text-white px-6 py-2 border-2 border-[#ff7400] hover:bg-[#f6f6f6] hover:text-[#ff7400] font-medium">
                             SCHEDULE A VISIT
                         </button>
                     </div>
-
-                    {/* Botón Hamburguesa (solo móvil) */}
                     <div className="lg:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
@@ -66,7 +71,7 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {/* Menú Móvil con animación */}
+            {/* Menú Móvil */}
             <div
                 className={`fixed inset-y-0 left-0 w-64 bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"
                     }`}
@@ -95,14 +100,14 @@ const Navbar = () => {
 
                     {/* Items del Menú */}
                     <ul className="mt-12 space-y-4">
-                        {["Home", "Amenities", "Floor Plans", "Renderings", "Deposit Structure", "Fact Sheet"].map((item) => (
-                            <li key={item}>
+                        {menuItems.map(({ name, path }) => (
+                            <li key={name}>
                                 <Link
-                                    href="/"
+                                    href={path}
                                     onClick={() => setIsOpen(false)}
                                     className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded"
                                 >
-                                    {item.toUpperCase()}
+                                    {name.toUpperCase()}
                                 </Link>
                             </li>
                         ))}
@@ -120,3 +125,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
