@@ -1,4 +1,3 @@
-
 const ThirdContent = () => {
     return (
         <div className="bg-[url('/253-scaled.jpg')] bg-cover bg-center bg-no-repeat h-[500px] lg:h-[400px] flex items-center justify-center ">

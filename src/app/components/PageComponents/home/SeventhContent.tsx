@@ -16,7 +16,7 @@ export default function SeventhContent() {
           </div>
         </div>
         <div className="space-y-8">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-[#FF7E22] leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-[#ff7e22] leading-tight">
             HOME IS WAITING FOR YOU HERE
           </h2>
 
