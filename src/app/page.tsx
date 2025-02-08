@@ -8,7 +8,6 @@ import SixthComponent from "./components/PageComponents/home/SixthComponent";
 import SeventhContent from "./components/PageComponents/home/SeventhContent";
 import EightContent from "./components/PageComponents/home/EightContent";
 import NinthContent from "./components/PageComponents/home/NinthContent";
-import ApartmentAmenities from "./apartment-amenities/page";
 
 export default function Home() {
   return (
@@ -28,7 +27,6 @@ export default function Home() {
         <SeventhContent />
         <EightContent />
         <NinthContent />
-        <ApartmentAmenities />
     </div>
   );
 }
