@@ -34,13 +34,23 @@ const Navbar = () => {
                         <ul className="flex space-x-8 text-sm">
                             {menuItems.map(({ name, path }) => (
                                 <li key={name} className="relative group">
-                                    <a href={path} className="text-gray-700 hover:text-gray-900 font-medium">
-                                        {name.toUpperCase()}
+                                    {name === "Fact Sheet" ? (
+                                        <a
+                                        href="https://villamiami-residences.com/wp-content/uploads/2023/11/FactSheet-Modificado.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-gray-700 hover:text-gray-900 font-medium"
+                                    >
+                                    {name.toUpperCase()}
                                     </a>
-                                    <span className="absolute bottom-0 left-0 transform w-0 group-hover:w-2/5 h-0.5 bg-[#ff7400] transition-all duration-300"></span>
-                                </li>
-                            ))}
-                        </ul>
+                                ) : (
+                            <Link href={path} className="text-gray-700 hover:text-gray-900 font-medium">
+                                {name.toUpperCase()}
+                            </Link>
+                            )}
+                        </li>
+                    ))}
+                    </ul>
                     </div>
                     <div className="hidden lg:flex items-center space-x-4">
                         <button className="bg-[#ff7400] text-white px-6 py-2 border-2 border-[#ff7400] hover:bg-[#f6f6f6] hover:text-[#ff7400] font-medium">
