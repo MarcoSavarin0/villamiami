@@ -57,38 +57,32 @@ const locations = [
 function FourthContent() {
   return (
     <div className="bg-grey-100">
-      <section className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Text Content */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <p className="text-gray-500 uppercase tracking-wider">neighborhood</p>
-              <h2 className="text-4xl font-bold text-gray-900 leading-tight">
-                At water's edge, with the best of Miami at your door
-              </h2>
-              <p className="text-lg text-gray-600 max-w-lg">
-                Stroll along the promenade in the morning, dip into a museum midday, sip wine from the Loire Valley and dine on pasta alle vongole in the evening.
-              </p>
-            </div>
-            <button className="bg-[#FF7E22] text-white px-8 py-4 text-lg font-medium hover:bg-[#F6F6F6] transition-colors">
+      <section className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="space-y-6 text-center lg:text-left">
+            <p className="text-gray-500 uppercase tracking-wider">neighborhood</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
+              At water's edge, with the best of Miami at your door
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600 max-w-lg mx-auto lg:mx-0">
+              Stroll along the promenade in the morning, dip into a museum midday, sip wine from the Loire Valley and dine on pasta alle vongole in the evening.
+            </p>
+            <button className="bg-[#FF7E22] text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium hover:bg-[#F6F6F6] transition-colors">
               SCHEDULE A VISIT
             </button>
           </div>
-          <div className="relative">
+          <div className="relative w-full">
             <Swiper
               modules={[Navigation]}
-              spaceBetween={20}
-              slidesPerView={2}
+              spaceBetween={16}
+              slidesPerView={1}
               navigation={{
                 prevEl: '.swiper-button-prev',
                 nextEl: '.swiper-button-next',
               }}
               loop={true}
               breakpoints={{
-                320: {
-                  slidesPerView: 1,
-                },
-                768: {
+                640: {
                   slidesPerView: 2,
                 },
               }}
@@ -100,13 +94,13 @@ function FourthContent() {
                     <img
                       src={location.image}
                       alt={location.name}
-                      className="w-full h-[500px] object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-[350px] sm:h-[450px] object-cover transition-transform duration-500 group-hover:scale-110"
                     />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                      <p className="text-white/80 text-sm uppercase tracking-wider">
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 sm:p-6">
+                      <p className="text-white/80 text-xs sm:text-sm uppercase tracking-wider">
                         {location.category}
                       </p>
-                      <h3 className="text-white text-xl font-medium mt-1">
+                      <h3 className="text-white text-lg sm:text-xl font-medium mt-1">
                         {location.name}
                       </h3>
                     </div>
@@ -115,11 +109,11 @@ function FourthContent() {
               ))}
             </Swiper>
             
-            <button className="swiper-button-prev absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 p-2 rounded-full shadow-lg hover:bg-white transition-colors">
-              <ChevronLeft className="w-6 h-6" />
+            <button className="swiper-button-prev absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 p-2 rounded-full shadow-lg hover:bg-white transition-colors">
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
-            <button className="swiper-button-next absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 p-2 rounded-full shadow-lg hover:bg-white transition-colors">
-              <ChevronRight className="w-6 h-6" />
+            <button className="swiper-button-next absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 p-2 rounded-full shadow-lg hover:bg-white transition-colors">
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
           </div>
         </div>
@@ -129,3 +123,4 @@ function FourthContent() {
 }
 
 export default FourthContent;
+

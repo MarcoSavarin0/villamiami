@@ -1,6 +1,8 @@
 import Carousel from '../components/PageComponents/home/Carousel';
 import Gallery from '../components/PageComponents/home/Gallery';
 import MultiCarousel from '../components/PageComponents/home/MultiCarousel';
+import EightContent from '../components/PageComponents/home/EightContent';
+import NinthContent from '../components/PageComponents/home/NinthContent';
 
 const Renderings = () => {
     const viewsImages = [
@@ -34,9 +36,9 @@ const Renderings = () => {
         <div>
             <div className="bg-[url('/193.webp')] bg-cover bg-center bg-no-repeat h-[500px] lg:h-[550px] flex items-center justify-center">
                 <div className="z-40 text-white bg-[#000000ac] w-full h-full flex flex-col items-center justify-center text-center px-6">
-                    <h2 className="uppercase font-black text-7xl">renderings</h2>
-                    <h4 className="uppercase text-xl pt-4 pb-12">Airy, Italianate living in the heart of Miami</h4>
-                    <p className="font-light text-lg max-w-md">
+                    <h2 className="uppercase font-black text-4xl md:text-5xl  lg:text-7xl">renderings</h2>
+                    <h4 className="uppercase text-sm pt-4 pb-12 md:text-lg  lg:text-xl">Airy, Italianate living in the heart of Miami</h4>
+                    <p className="font-light text-sm max-w-md md:text-md  lg:text-lg">
                         New York design studio Charles & Co developed the residence interiors by marrying a sophisticated 
                         European sensibility with a focus on warmth, romance, and the waterfront. Estate-style residences 
                         overlook the bay, beaches, and beyond, while sitting high in the sky.
@@ -147,6 +149,8 @@ const Renderings = () => {
           <Gallery />
         </div>
       </section>
+      <EightContent />
+      <NinthContent />
      </div>
     );
 };

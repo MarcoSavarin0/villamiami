@@ -6,7 +6,7 @@ const DepositStructure = () => {
     <div>
         <div className="bg-[url('/193.webp')] bg-cover bg-center bg-no-repeat h-[500px] lg:h-[550px] flex items-center justify-center ">
             <div className="z-40 text-white bg-[#000000ac] w-full h-full flex items-center justify-center">
-                <h2 className="uppercase font-black text-7xl">DEPOSIT STRUCTURE</h2>
+                <h2 className="uppercase font-black text-4xl md:text-5xl lg:text-7xl">DEPOSIT STRUCTURE</h2>
             </div>
         </div>
         <div className="flex flex-col items-center justify-center px-4 py-16 bg-white">

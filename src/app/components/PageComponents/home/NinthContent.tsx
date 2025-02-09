@@ -6,8 +6,8 @@ const NinthContent = () => {
       <div className="container mx-auto flex flex-wrap">
         <div className="w-1/3"></div>
         <div className="w-1/3 flex justify-center">
-          <p className="text-center text-lg text-white">
-            <a href="https://villamiami-residences.com/legal-disclaimer/" >
+          <p className="text-center text-white text-sm lg:text-lg ">
+            <a href="/legal-disclaimer" >
               LEGAL DISCLAIMER
             </a>
           </p>
