@@ -1,4 +1,5 @@
 "use client"
+
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,11 +13,11 @@ const Navbar = () => {
         { name: "Floor Plans", path: "/floor-plans" },
         { name: "Renderings", path: "/renderings" },
         { name: "Deposit Structure", path: "/deposit-structure" },
-        { name: "Fact Sheet", path: "/fact-sheet" }
+        { name: "Fact Sheet", path: "https://villamiami-residences.com/wp-content/uploads/2023/11/FactSheet-Modificado.pdf" }
     ];
 
     return (
-        <nav className="bg-white shadow-lg lg:py-3 fixed top-0 w-full z-50">
+        <nav className="bg-white shadow-lg lg:py-6 fixed top-0 w-full z-50">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex justify-between items-center h-16">
                     <div className="flex-shrink-0">
